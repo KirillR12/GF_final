@@ -1,0 +1,152 @@
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  box-shadow: 0 0 5px rgba(173, 0, 0, 0.4);
+  border-radius: 5em;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__hard {
+  position: absolute;
+  bottom: 2em;
+  right: 1em;
+  color: rgb(255, 19, 117);
+}
+
+.imgcard {
+  width: 50%;
+}
+
+.modal-cont {
+  position: fixed;
+  background-color: #2228;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 270px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 2px #0006, 0 0 8px 2px #0004;
+  display: grid;
+  gap: 20px;
+  position: relative;
+}
+
+.modal h2 {
+  margin: 0;
+  text-align: center;
+}
+
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid rgb(218, 218, 218);
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: rgb(241, 255, 38);
+}
+
+button.btn {
+  border: none;
+  height: 30px;
+  border-radius: 10px;
+  background-color: rgb(241, 255, 38);
+}
+
+button.link {
+  background-color: transparent;
+  border: 1px solid rgb(241, 255, 38);
+  box-sizing: border-box;
+}
+
+.modal_cont {
+  position: fixed;
+  background-color: #2228;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  width: 270px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 2px #0006, 0 0 8px 2px #0004;
+  display: grid;
+  gap: 20px;
+  position: relative;
+}
+
+.modal h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.modal_close {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  border: 2px solid;
+  box-sizing: border-box;
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  cursor: pointer;
+}
+
+.modal_close:hover {
+  background-color: rgb(241, 255, 38);
+}
+ 
+.text {
+  width: 500px;
+padding-top: 70px;
+}
+
+.imgHome {
+  height: 40%;
+width: 40%;
+border-radius: 15px;
+margin-right: 15px;
+}
+
+

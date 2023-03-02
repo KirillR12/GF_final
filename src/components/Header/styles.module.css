@@ -1,0 +1,28 @@
+header {
+    background-color: rgb(241, 255, 38);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    height: 100px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.menu {
+    display: flex;
+    gap: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.search {
+padding-right: 120px;
+}
