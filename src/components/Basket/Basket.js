@@ -12,12 +12,13 @@ export const GET_PRODUCTS_BY_ID_QUERY_KEY = 'GET_PRODUCTS_BY_ID_QUERY_KEY'
 
 export function Basket() {
   const cart = useSelector((store) => store.cart)
+  const token = useSelector((store) => store.user.token)
   const total = cart.length
 
   const {
     data, error, isSuccess, isError,
   } = useQuery({
-    queryKey: [GET_PRODUCTS_BY_ID_QUERY_KEY, cart.map((el) => el.id)],
+    queryKey: [GET_PRODUCTS_BY_ID_QUERY_KEY, cart.map((el) => el.id), token],
     queryFn: getProductsByIds,
   })
 

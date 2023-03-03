@@ -18,7 +18,7 @@ export function Profile() {
   const {
     data, isSuccess,
   } = useQuery({
-    queryKey: [USERINFO_QUERY_KEY],
+    queryKey: [USERINFO_QUERY_KEY, token],
     queryFn: getUserInfo,
   })
 

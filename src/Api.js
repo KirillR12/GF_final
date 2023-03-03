@@ -1,10 +1,10 @@
 /* eslint-disable*/
 export const getProductsByIds = ({ queryKey }) => {
-    const [_key, idProduct] = queryKey;
+    const [_key, idProduct, token] = queryKey;
     return Promise.all(idProduct.map(id => fetch(`https://api.react-learning.ru/products/${id}`, {
         method: 'GET',
         headers: {
-            authorization: `Bearer ${localStorage.getItem('token')}`
+            authorization: `Bearer ${token}`
         }
     })))
         .then((resMass) => {
@@ -60,10 +60,12 @@ export const signUp = (data) => fetch('https://api.react-learning.ru/signup', {
         return data;
     })
 
-export const getUserInfo = () => fetch('https://api.react-learning.ru/v2/sm8/users/me', {
+export const getUserInfo = ({ queryKey }) => {
+    const [_key, token] = queryKey;
+    return fetch(`https://api.react-learning.ru/v2/sm8/users/me`, {
     method: 'GET',
     headers: {
-        authorization: `Bearer ${localStorage.getItem('token')}`
+        authorization: `Bearer ${token}`
     }
 })
     .then((res) => {
@@ -77,6 +79,7 @@ export const getUserInfo = () => fetch('https://api.react-learning.ru/v2/sm8/use
     .then((data) => {
         return data;
     })
+}
 
 export const getProductById = ({ queryKey }) => {
     const [_key, token, id] = queryKey;

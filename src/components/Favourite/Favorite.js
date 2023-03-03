@@ -9,12 +9,13 @@ import styles from './styles.module.css'
 const GET_PRODUCTS_BY_ID_QUERY_KEY = 'GET_PRODUCTS_BY_ID_QUERY_KEY'
 
 export function Favorite() {
+  const token = useSelector((store) => store.user.token)
   const favorite = useSelector((store) => store.favourite)
 
   const {
     data, error, isSuccess, isError,
   } = useQuery({
-    queryKey: [GET_PRODUCTS_BY_ID_QUERY_KEY, favorite],
+    queryKey: [GET_PRODUCTS_BY_ID_QUERY_KEY, favorite, token],
     queryFn: getProductsByIds,
   })
 

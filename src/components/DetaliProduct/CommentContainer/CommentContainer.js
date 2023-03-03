@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import { useQuery } from '@tanstack/react-query'
 import { useSelector } from 'react-redux'
 import { getCommentsByProductID } from '../../../Api'
@@ -16,7 +17,7 @@ export function CommentContainer({ id }) {
   })
 
   if (isSuccess) {
-    const comments = data.map((elem) => <Comment params={elem} />)
+    const comments = data.map((elem) => <Comment key={elem._id} params={elem} />)
     return (
       [comments]
     )

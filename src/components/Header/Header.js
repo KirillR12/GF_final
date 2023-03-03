@@ -17,6 +17,7 @@ export function Header() {
     dispatch(removeToken())
     dispatch(removeUserGroup())
     dispatch(removeUserID())
+    localStorage.removeItem('state')
     toast('Вы успешно вышли', { type: 'error' })
   }
 
